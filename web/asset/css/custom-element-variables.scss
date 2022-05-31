@@ -1,0 +1,17 @@
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": (
+      "base": #c79154,
+    )
+  ),
+
+//   $button-padding-horizontal: (
+//     "default": 80px
+//   )
+);
+
+@import 'element-plus/theme-chalk/src/index';
+
+/* 改变主题色变量 */
+// $--color-primary: #deb385;
+$--color-primary: #c79154;

@@ -1,0 +1,183 @@
+{
+    "name": "jt-admin",
+    "version": "1.0.0",
+    "private": true,
+    "description": "",
+    "author": "youjieli@jintengtech.com",
+    "scripts": {
+        "build": "npm run build:vue && npm run tsc",
+        "test:unit": "vue-cli-service test:unit",
+        "lint": "vue-cli-service lint",
+        "deploy": "npm run build && npm run tars-deploy && npm run clean",
+        "autod": "autod",
+        "build:vue": "ts-node ./run.ts vue-cli-service build",
+        "ci": "npm run lint && npm run cov && npm run tsc",
+        "clean": "ets clean",
+        "cov": "egg-bin cov",
+        "cz": "git add . && git cz",
+        "debug": "egg-bin debug --port=8082",
+        "debug:vue": "vue-cli-service build",
+        "dev": "egg-bin dev --port=8085",
+        "dev:vue": "ts-node ./run.ts vue-cli-service serve",
+        "inspect:config": "cross-env VUE_CLI_SERVICE_CONFIG_PATH=$PWD/config/vue.config.js vue inspect > ./webpack.config.js",
+        "inspect:config:build": "cross-env node ./build/script/run vue inspect > ./webpack.config.js --mode production",
+        "lint:vue": "ts-node ./run.ts vue-cli-service lint",
+        "start": "egg-scripts start --port=8082 --daemon --workers=1 --title=egg-server-jv-system",
+        "stop": "egg-scripts stop --title=egg-server-jv-system",
+        "tars": "node ./build/tars",
+        "tars-deploy": "./node_modules/@jv/tars-deploy/bin/tars-deploy JTBoilerplateServer",
+        "test": "npm run lint --fix && npm run test-local && jest",
+        "test-local": "egg-bin test",
+        "test-web": "jest --watchAll",
+        "tsc": "ets && tsc -p tsconfig.json"
+    },
+    "dependencies": {
+        "@elastic/elasticsearch": "^6.8.8",
+        "@element-plus/icons": "0.0.11",
+        "@jv/atom-css": "^1.0.5",
+        "@jv/egg-jv-common": "^1.1.288",
+        "@jv/egg-jv-log": "^1.1.95",
+        "@jv/jv-egg-framework": "^1.2.53",
+        "@jv/jv-models": "^1.1.378",
+        "@jv/jv-types": "^1.0.19",
+        "@vueuse/core": "^5.3.0",
+        "core-js": "^3.6.5",
+        "egg": "^2.29.4",
+        "egg-scripts": "^2.13.0",
+        "egg-view": "^2.1.3",
+        "egg-view-assets": "^1.7.0",
+        "egg-view-nunjucks": "^2.3.0",
+        "egg-view-vue-ssr": "^3.3.3",
+        "element-plus": "^1.2.0-beta.5",
+        "moment": "^2.29.1",
+        "mysql": "^2.18.1",
+        "reflect-metadata": "^0.1.13",
+        "typeorm": "^0.2.32",
+        "vant": "^3.1.1",
+        "vue": "^3.2.19",
+        "vue-router": "^4.0.6",
+        "vuex": "^4.0.2"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-optional-chaining": "^7.13.12",
+        "@commitlint/cli": "^9.0.0",
+        "@commitlint/config-conventional": "^12.1.1",
+        "@jv/tars-deploy": "^1.0.4",
+        "@jv/tars2node-cli": "^0.1.7",
+        "@tars/config": "^2.0.5",
+        "@tars/deploy": "^2.0.6",
+        "@types/egg": "^1.5.0",
+        "@types/jest": "^24.9.1",
+        "@types/lodash": "^4.14.168",
+        "@types/mocha": "^2.2.40",
+        "@types/node": "^14.14.41",
+        "@types/supertest": "^2.0.0",
+        "@typescript-eslint/eslint-plugin": "^4.22.0",
+        "@typescript-eslint/parser": "^4.22.0",
+        "@vitejs/plugin-vue": "^1.9.3",
+        "@vue/babel-preset-app": "^5.0.0-beta.3",
+        "@vue/cli-plugin-babel": "~5.0.0-beta.3",
+        "@vue/cli-plugin-eslint": "^4.5.13",
+        "@vue/cli-plugin-router": "~5.0.0-beta.3",
+        "@vue/cli-plugin-typescript": "^5.0.0-beta.3",
+        "@vue/cli-plugin-unit-jest": "^5.0.0-beta.3",
+        "@vue/cli-plugin-vuex": "^5.0.0-beta.3",
+        "@vue/cli-service": "^5.0.0-beta.3",
+        "@vue/compiler-sfc": "^3.2.19",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "@vue/eslint-config-typescript": "^7.0.0",
+        "@vue/test-utils": "^2.0.0-0",
+        "autod": "^3.0.1",
+        "autod-egg": "^1.1.0",
+        "axios": "^0.27.2",
+        "chalk": "^4.1.1",
+        "commitizen": "^4.2.4",
+        "commitlint-config-cz": "^0.13.2",
+        "cross-env": "^7.0.3",
+        "css-loader": "^6.7.1",
+        "cz-conventional-changelog": "^2.1.0",
+        "cz-customizable": "^6.3.0",
+        "dayjs": "^1.11.2",
+        "echarts": "^5.1.2",
+        "egg-bin": "^4.15.0",
+        "egg-mock": "^4.1.0",
+        "eslint": "^6.7.2",
+        "eslint-config-egg": "^8.0.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-vue": "^7.20.0",
+        "globby": "^11.0.3",
+        "html-webpack-harddisk-plugin": "^1.0.2",
+        "js-cookie": "^2.2.1",
+        "lint-staged": "^9.5.0",
+        "lodash": "^4.17.21",
+        "pdfjs-dist": "^2.5.207",
+        "prettier": "^2.2.1",
+        "qs": "^6.10.3",
+        "regenerator-runtime": "^0.13.9",
+        "sass": "^1.38.0",
+        "sass-loader": "^10.0.0",
+        "ts-node": "^9.1.1",
+        "tsconfig-paths": "^3.10.1",
+        "tslib": "^1.9.0",
+        "typescript": "^4.1.5",
+        "vite": "^2.2.2",
+        "vue-eslint-parser": "^7.10.0",
+        "vue-jest": "^5.0.0-0",
+        "vue-loader": "^16.3.0",
+        "vue-style-loader": "^4.1.3",
+        "webfonts-loader": "^7.3.0",
+        "webpack": "^4.44.2",
+        "webpack-spritesmith": "^1.1.0",
+        "yargs": "^16.2.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "jest": {
+        "preset": "@vue/cli-plugin-unit-jest/presets/typescript-and-babel",
+        "moduleNameMapper": {
+            "^@/(.*)$": "<rootDir>/web/src/$1"
+        },
+        "transform": {
+            "^.+\\.vue$": "vue-jest"
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-customizable"
+        },
+        "cz-customizable": {
+            "config": "commitlint.config.js"
+        }
+    },
+    "egg": {
+        "typescript": true,
+        "declarations": false,
+        "framework": "@jv/jv-egg-framework"
+    },
+    "engines": {
+        "node": "12.13.0"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged",
+        "commit-msg": "commitlint -E GIT_PARAMS"
+    },
+    "license": "MIT",
+    "lint-staged": {
+        "*.{json,css,scss,html}": [
+            "prettier --write",
+            "git add"
+        ],
+        "*.{ts,js,vue}": [
+            "prettier --write",
+            "node_modules/.bin/eslint --quiet",
+            "git add"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    }
+}

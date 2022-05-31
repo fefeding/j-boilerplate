@@ -1,0 +1,61 @@
+# .DS_Store
+# app/view/index.html
+# app/view/mobile.html
+# app/view/pc.html
+
+# web/asset/images/sprite.png
+# web/asset/css/sprite.scss
+
+
+node_modules/
+# typings/
+
+# /config/local.ts
+
+# logs/
+# npm-debug.log
+# coverage/
+# .idea/
+# run/
+# *.swp
+# *.lock
+# !.autod.conf.js
+# !devops.config.js
+# !.eslintrc.js
+
+# app/**/*.js
+# test/**/*.js
+# config/**/*.js
+# !config/babel.config.js
+# !config/vue.config.js
+# !/server.js
+# app/**/*.map
+# test/**/*.map
+# config/**/*.map
+
+# /web/dist
+# /app/public
+
+# # local env files
+# /app/.env.local
+# /app/.env.*.local
+
+# # Log files
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+# pnpm-debug.log*
+
+# # Editor directories and files
+# .idea
+# *.suo
+# *.ntvs*
+# *.njsproj
+# *.sln
+# *.sw?
+
+# webpack.config.js
+# app/web/src/assets/images/sprite.png
+# app/web/src/assets/css/sprite.scss
+# app/view/vue3.html
+# app/view/mobile.html

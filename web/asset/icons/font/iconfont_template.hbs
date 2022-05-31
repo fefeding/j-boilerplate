@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "{{fontName}}";
+    src: {{{src}}};
+}
+
+[class^="{{classPrefix}}"], [class*=" {{classPrefix}}"] {
+    font-family: {{fontName}} !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    vertical-align: middle;
+    color: currentColor;
+    flex:{{{src}}};
+}
+
+{{#each codepoints}}
+.{{../classPrefix}}{{@key}}:after {
+    content: "\\{{this}}";
+}
+{{/each}}

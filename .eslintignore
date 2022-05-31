@@ -1,0 +1,11 @@
+**/*.d.ts
+node_modules/
+coverage
+
+/app/web/tests/
+/app/web/**/coverage/
+/app/web/**/*.min.js
+/app/web/*.js
+/app/web/build/
+vue.config.js
+web/asset/lib/
