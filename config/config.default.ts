@@ -52,7 +52,7 @@ export default (appInfo: EggAppInfo) => {
         defaultHost: `http://${commonDomain}/account`,
         main: {
             accessKey: 'jv.account.20191022',
-            loginUrl: `http://${commonDomain}/account/login`,
+            loginUrl: `http://${commonDomain}/account/sso/login`,
             logoutUrl: `http://${commonDomain}/account/logout`,
             systemUrl: `http://${commonDomain}/account`,
         },
