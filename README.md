@@ -1,5 +1,22 @@
 # 金腾脚手架
+> 使用说明
+```javascript
+// 安装依赖
+pnpm i 
+
+// 开发环境运行
+pnpm dev
+
+// 前端资源构建
+pnpm build:vue
+
+// 整体构建
+pnpm deploy
+```
+
+
 > 项目目录说明
+```javascript
 app                         egg相关
  ├─adapter                  适配层  根据tars config内的adpater属性配置 （crm | jt） 项目运行时adpater就会指向对应的文件夹目录（crm | jt）
  │  ├─crm                   
@@ -55,7 +72,7 @@ web                         前端目录代码
   └─tests                   前端单元测试
       └─unit
           └─base
-
+```
 
 ## 构建目标
 
