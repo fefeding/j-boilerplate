@@ -59,6 +59,7 @@
         "vuex": "^4.0.2"
     },
     "devDependencies": {
+        "postcss-pxtorem": "^6.0.0",
         "@babel/plugin-proposal-optional-chaining": "^7.13.12",
         "@commitlint/cli": "^9.0.0",
         "@commitlint/config-conventional": "^12.1.1",
@@ -131,6 +132,7 @@
         "yargs": "^16.2.0"
     },
     "browserslist": [
+        "chrome > 75",
         "> 1%",
         "last 2 versions",
         "not dead"
