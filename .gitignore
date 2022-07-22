@@ -9,6 +9,7 @@ web/asset/css/sprite.scss
 
 node_modules/
 typings/
+!web/src/typings
 
 /config/local.ts
 
