@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { AxiosStatic } from 'axios';
+import { AxiosInstance } from '@jv/egg-jv-common';
 import { IMessage } from 'element-plus/packages/message/src/types';
 import { ElMessageBox } from 'element-plus/packages/message-box/src/message-box.type';
 declare module '*.vue' {
@@ -10,7 +10,7 @@ declare module '*.vue' {
 
 declare module '@vue/runtime-core' {
     interface ComponentCustomProperties {
-        $ajax: AxiosStatic;
+        $ajax: AxiosInstance;
         $message: IMessage;
         $messageBox: ElMessageBox;
     }
