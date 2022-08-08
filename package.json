@@ -57,6 +57,8 @@
         "vue": "^3.2.19",
         "vue-router": "^4.0.6",
         "vuex": "^4.0.2",
+        "dayjs": "^1.11.2",
+        "echarts": "^5.1.2",
         "axios": "^0.27.2"
     },
     "devDependencies": {
@@ -98,8 +100,6 @@
         "css-loader": "^6.7.1",
         "cz-conventional-changelog": "^2.1.0",
         "cz-customizable": "^6.3.0",
-        "dayjs": "^1.11.2",
-        "echarts": "^5.1.2",
         "egg-bin": "^4.15.0",
         "egg-mock": "^4.1.0",
         "eslint": "^6.7.2",
