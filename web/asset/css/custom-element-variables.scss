@@ -1,4 +1,4 @@
-@forward "element-plus/theme-chalk/src/common/var.scss" with (
+@forward "@jv/jtui/theme-chalk/src/common/var.scss" with (
   $colors: (
     "primary": (
       "base": #c79154,
@@ -10,7 +10,7 @@
 //   )
 );
 
-@import 'element-plus/theme-chalk/src/index';
+@import '@jv/jtui/theme-chalk/src/index';
 
 /* 改变主题色变量 */
 // $--color-primary: #deb385;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import zhCn from 'element-plus/lib/locale/lang/zh-cn';
+import zhCn from '@jv/jtui/lib/locale/lang/zh-cn';
 import { ref } from 'vue';
 import JtHeader from '@/pc/components/layout/Header.vue';
 import JtFooter from '@/pc/components/layout/Footer.vue';

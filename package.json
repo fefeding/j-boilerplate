@@ -51,7 +51,7 @@
         "egg-view-assets": "^1.7.0",
         "egg-view-nunjucks": "^2.3.0",
         "egg-view-vue-ssr": "^3.3.3",
-        "element-plus": "^1.2.0-beta.5",
+        "@jv/jtui": "2.2.10",
         "mysql": "^2.18.1",
         "reflect-metadata": "^0.1.13",
         "typeorm": "^0.2.32",

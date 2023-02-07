@@ -127,7 +127,7 @@ module.exports = {
                 elementUI: {
                     name: 'element-ui', // 单独将 elementUI 拆包
                     priority: 20, // 权重要大于 libs 和 app 不然会被打包进 libs 或者 app
-                    test: /[\\/]node_modules[\\/]element-plus[\\/]/,
+                    test: /[\\/]node_modules[\\/]@jv[\\/]jtui[\\/]/,
                     chunks: 'initial', // 只打包初始时依赖的第三方
                 },
                 vant: {
