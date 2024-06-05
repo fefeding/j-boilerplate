@@ -1,15 +1,43 @@
-// 实体
-import EventEmitter, { CallBack } from './EventEmitter';
-
-interface WatchCallBack {
-    (newValue: Record<string, any>, oldVaule: Record<string, any>, key: string): void;
+import EventEmitter from '@fefeding/eventemitter';
+/**
+ * @public
+ * An interface to define a callback function with any number and type of parameters, and any return.
+ */
+export interface CallBack {
+    (...args: any[]): any;
 }
 
-export default class Entity extends EventEmitter {
-    // 状态
-    state: Record<string, any> = {};
 
-    constructor(data?: Record<string, any>) {
+/**
+ * @public
+ * @param newValue - The new state value.
+ * @param oldValue - The previous state value.
+ * @param key - The key which the state value was updated.
+ */
+export interface WatchCallBack {
+    (
+        newValue: Record<string, any>,
+        oldVaule: Record<string, any>,
+        key: string
+    ): void;
+}
+
+/**
+ * @public
+ * Entity class with watchable state.
+ */
+export default class Entity<T> extends EventEmitter {
+    /**
+     * 状态
+     * @public
+     */
+    state: T;
+
+    /**
+     * @public
+     * @param  data - initialization data.
+     */
+    constructor(data?:T) {
         super();
         this.state = new Proxy(data || {}, {
             set: (oTarget: any, sKey, vValue) => {
@@ -26,6 +54,11 @@ export default class Entity extends EventEmitter {
             },
         });
     }
+    /**
+     * @public
+     * @param  cb - Callback function to execute on state updates.
+     * return Callback to lift the watch state.
+     */
     watch(cb: WatchCallBack): CallBack {
         this.on('update', cb);
         return () => this.off('update', cb);
